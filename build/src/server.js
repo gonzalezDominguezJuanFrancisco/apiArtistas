@@ -25,7 +25,7 @@ class Server {
         });
     }
     routes() {
-        this.app.use('/', grupoRoutes_1.grupoRoutes);
+        this.app.use('/api', grupoRoutes_1.grupoRoutes);
     }
     start() {
         this.app.listen(this.app.get('port'), () => {

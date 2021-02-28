@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import { heroRoutes } from './routes/heroRoutes'
+import { grupoRoutes } from './routes/grupoRoutes'
 class Server {
     private app: express.Application
     constructor(){
@@ -24,7 +24,7 @@ class Server {
     }
 
     private routes(){
-        this.app.use('/api', heroRoutes)
+        this.app.use('/', grupoRoutes)
     }
 
     start(){

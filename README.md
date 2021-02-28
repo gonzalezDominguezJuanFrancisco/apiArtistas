@@ -1,9 +1,9 @@
-git init
-git add .
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/sgbdpdv2021/restapiheroes.git
-git push -u origin main
+# API de artistas
 
-Api rest que trabaja con heroes006
+Juan Francisco González Domínguez
 
+API que comunica la aplicación WEB con las bases de datos, realizando:
+	- Métodos post
+	- Métodos get
+	- Métodos put
+	- Métodos delete
