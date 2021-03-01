@@ -247,7 +247,7 @@ class GrupoRoutes {
 
     private updateCancion = async (req: Request, res: Response) => {
         const { grupo, nombre } = req.params
-        const { duracion, album, spotify, youtube, fechaSalida, top50 } = req.body
+        const { album, duracion, fechaSalida, spotify, top50, youtube } = req.body
         await db.conectarBD()
         await Canciones.findOneAndUpdate({
             grupo: grupo,
