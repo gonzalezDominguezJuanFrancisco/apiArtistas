@@ -1,6 +1,7 @@
 import { Schema, model } from 'mongoose'
 
 export const cancionSchema = new Schema({
+    _id: {type: String},
     nombre: {type: String},
     duracion: {type: Number},
     grupo: {type: String},

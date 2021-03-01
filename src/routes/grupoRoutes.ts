@@ -294,12 +294,11 @@ class GrupoRoutes {
     }
 
     private deleteMiembro = async (req: Request, res: Response) => {
-        const { grupo, nombre } = req.params
+        const { id } = req.params
         await db.conectarBD()
         await Miembros.findOneAndDelete(
             {
-                grupo: grupo,
-                nombre: nombre
+                _id: id
             }, 
             (err: any, doc) => {
                 if(err) console.log(err)
@@ -315,12 +314,11 @@ class GrupoRoutes {
     }
 
     private deleteCancion = async (req: Request, res: Response) => {
-        const { grupo, nombre } = req.params
+        const { id } = req.params
         await db.conectarBD()
         await Canciones.findOneAndDelete(
             {
-                grupo: grupo,
-                nombre: nombre
+                _id: id
             }, 
             (err: any, doc) => {
                 if(err) console.log(err)
@@ -521,11 +519,11 @@ class GrupoRoutes {
         this._router.post('/postMiembro', this.postMiembro),
         this._router.post('/postCancion', this.postCancion),
         this._router.post('/updateGrupo/:id', this.updateGrupo),
-        this._router.post('/updateMiembro/:grupo&:nombre', this.updateMiembro),
-        this._router.post('/updateCancion/:grupo&:nombre', this.updateCancion),
+        this._router.post('/updateMiembro/:id', this.updateMiembro),
+        this._router.post('/updateCancion/:id', this.updateCancion),
         this._router.get('/deleteGrupo/:id', this.deleteGrupo),
-        this._router.get('/deleteMiembro/:grupo&:nombre', this.deleteMiembro),
-        this._router.get('/deleteCancion/:grupo&:nombre', this.deleteCancion),
+        this._router.get('/deleteMiembro/:id', this.deleteMiembro),
+        this._router.get('/deleteCancion/:id', this.deleteCancion),
         this._router.get('/getDuraciones', this.getDuraciones),
         this._router.get('/getFechaS', this.getFechaS),
         this._router.get('/getEdades', this.getEdades)

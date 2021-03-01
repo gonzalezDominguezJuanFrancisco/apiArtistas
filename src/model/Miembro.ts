@@ -1,6 +1,7 @@
 import { Schema, model } from 'mongoose'
 
 export const miembroSchema = new Schema({
+    _id: {type: String},
     grupo: {type: String},
     nombre: {type: String},
     puesto: {type: Array},
