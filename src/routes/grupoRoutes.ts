@@ -512,9 +512,9 @@ class GrupoRoutes {
         this._router.post('/updateGrupo/:id', this.updateGrupo),
         this._router.post('/updateMiembro/:id', this.updateMiembro),
         this._router.post('/updateCancion/:id', this.updateCancion),
-        this._router.get('/deleteGrupo/:id', this.deleteGrupo),
-        this._router.get('/deleteMiembro/:id', this.deleteMiembro),
-        this._router.get('/deleteCancion/:id', this.deleteCancion),
+        this._router.delete('/deleteGrupo/:id', this.deleteGrupo),
+        this._router.delete('/deleteMiembro/:id', this.deleteMiembro),
+        this._router.delete('/deleteCancion/:id', this.deleteCancion),
         this._router.get('/getDuraciones', this.getDuraciones),
         this._router.get('/getFechaS', this.getFechaS),
         this._router.get('/getEdades', this.getEdades)
