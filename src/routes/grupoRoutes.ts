@@ -319,17 +319,8 @@ class GrupoRoutes {
         await Canciones.findOneAndDelete(
             {
                 _id: id
-            }, 
-            (err: any, doc) => {
-                if(err) console.log(err)
-                else{
-                    if (doc == null) {
-                        res.send(`No encontrado`)
-                    }else {
-                        res.send('Borrado correcto: '+ doc)
-                    }
-                }
-            })
+            }
+        )
         db.desconectarBD()
     }
 
