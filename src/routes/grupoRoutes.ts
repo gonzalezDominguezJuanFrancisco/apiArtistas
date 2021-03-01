@@ -249,7 +249,7 @@ class GrupoRoutes {
         const { grupo, nombre } = req.params
         const { duracion, album, spotify, youtube, fechaSalida, top50 } = req.body
         await db.conectarBD()
-        await Miembros.findOneAndUpdate({
+        await Canciones.findOneAndUpdate({
             grupo: grupo,
             nombre: nombre
         },
